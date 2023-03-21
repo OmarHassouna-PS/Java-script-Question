@@ -99,7 +99,6 @@ while (num10 < 0 || num10 > 100) {
 }
 
 // Q11:
- 
 let num11 = 0;
 num = prompt("Enter number of range 0 to 100");
 
@@ -109,7 +108,6 @@ while (isNaN(num)) {
 
 
 // Q12:
-
 let num12 = prompt("Enter a number");
 let sum12 = 0;
 for (let index = 0; index <= num12; index++) {
@@ -119,7 +117,6 @@ for (let index = 0; index <= num12; index++) {
 alert(sum12);
 
 // Q13:
-
 let num13 = prompt("Enter a number");
 let sum13 = 0;
 for (let index = 0; index <= num13; index++) {
@@ -127,6 +124,67 @@ for (let index = 0; index <= num13; index++) {
     sum13 += index;
 }
 alert(sum13 / (Number(num13) + 1));
+
+
+/* 
+Arrays 
+
+1- create a function that takes two arguments, one is an array and the other is a number,
+ then return the index of the given value or return -1 if the element cannot be found.
+
+2- create a function that takes an array of integers between 1 and 100 except for one, and returns the missing number.
+
+3- create a function that takes an array of integers and
+ returns a new array with the same integers without the duplicates 
+
+4- create a function that takes an array of integers and returns the average of all the numbers in it 
+
+*/
+
+function found (array, number) {
+
+    for (let index = 0; index < array.length; index++) {
+        if (array[index] === number) {
+            return index;
+        }
+    }
+    return -1;
+}
+
+function missingNumber (array) {
+
+    for (let index = 1; index <= 100; index++) {
+        if (array[index] !== index) {
+            return index;
+        }
+    }
+    return -1;
+}
+
+function duplicatesNumber (array1) {
+
+    array2 = [];
+
+    for (let index = 0; index < array1.length; index++) {
+
+        if (!array2.includes(array1[index])) {
+            array2.push(array1[index]);
+        }
+    }
+    return array2;
+}
+
+
+function averageNumber (array) {
+
+    sum = 0;
+
+    for (let index = 0; index < array.length; index++) {
+        sum += array[index];
+    }
+    return Number(sum / array.length);
+}
+
 
 
 
