@@ -153,9 +153,9 @@ function found (array, number) {
 
 function missingNumber (array) {
 
-    for (let index = 1; index <= 100; index++) {
-        if (array[index] !== index) {
-            return index;
+    for (let index = 0; index <= 100; index++) {
+        if (array[index] !== index+1) {
+            return index+1;
         }
     }
     return -1;
@@ -182,7 +182,7 @@ function averageNumber (array) {
     for (let index = 0; index < array.length; index++) {
         sum += array[index];
     }
-    return Number(sum / array.length);
+    return Math.floor(Number(sum / array.length));
 }
 
 
