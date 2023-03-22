@@ -116,7 +116,7 @@ for (let index = 0; index <= num12; index++) {
 }
 alert(sum12);
 
-// Q13:
+// Q13: 
 let num13 = prompt("Enter a number");
 let sum13 = 0;
 for (let index = 0; index <= num13; index++) {
@@ -126,21 +126,7 @@ for (let index = 0; index <= num13; index++) {
 alert(sum13 / (Number(num13) + 1));
 
 
-/* 
-Arrays 
-
-1- create a function that takes two arguments, one is an array and the other is a number,
- then return the index of the given value or return -1 if the element cannot be found.
-
-2- create a function that takes an array of integers between 1 and 100 except for one, and returns the missing number.
-
-3- create a function that takes an array of integers and
- returns a new array with the same integers without the duplicates 
-
-4- create a function that takes an array of integers and returns the average of all the numbers in it 
-
-*/
-
+// Array Q1
 function found (array, number) {
 
     for (let index = 0; index < array.length; index++) {
@@ -151,6 +137,7 @@ function found (array, number) {
     return -1;
 }
 
+// Array Q2
 function missingNumber (array) {
 
     array.sort();
@@ -163,6 +150,7 @@ function missingNumber (array) {
     return -1;
 }
 
+// Array Q3
 function duplicatesNumber (array1) {
 
     array2 = [];
@@ -178,6 +166,7 @@ function duplicatesNumber (array1) {
     return array2;
 }
 
+// Array Q4
 function averageNumber (array) {
 
     sum = 0;
