@@ -153,7 +153,9 @@ function found (array, number) {
 
 function missingNumber (array) {
 
-    for (let index = 0; index <= 100; index++) {
+    array.sort();
+
+    for (let index = 0; index <= array.length; index++) {
         if (array[index] !== index+1) {
             return index+1;
         }
@@ -165,6 +167,8 @@ function duplicatesNumber (array1) {
 
     array2 = [];
 
+    array1.sort();
+
     for (let index = 0; index < array1.length; index++) {
 
         if (!array2.includes(array1[index])) {
@@ -173,7 +177,6 @@ function duplicatesNumber (array1) {
     }
     return array2;
 }
-
 
 function averageNumber (array) {
 
