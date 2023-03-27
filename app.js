@@ -1,4 +1,4 @@
-// Q1
+/* // Q1
 let x = 5;
 alert("-9*3 = " + -9*3);
 alert("Value is " + 50);
@@ -124,7 +124,7 @@ for (let index = 0; index <= num13; index++) {
     sum13 += index;
 }
 alert(sum13 / (Number(num13) + 1));
-
+ */
 
 // Array Q1
 function found (array, number) {
@@ -175,6 +175,57 @@ function averageNumber (array) {
         sum += array[index];
     }
     return Math.floor(Number(sum / array.length));
+}
+
+// Array Q5
+function arrayPowers (array) { 
+
+    newArray = [];
+
+    // for (let index = 0; index < array.length; index++) { 
+    //     newArray.push(Math.pow(2, array[index]));
+    // }
+
+    // array.forEach( (value) => newArray.push(Math.pow(2, value)));
+
+    newArray = array.map( (value) => Math.pow(2, value));
+
+    return newArray;
+}
+
+// Array Q6
+function oddOReven (array) { 
+    newArray = [];
+
+    newArray = array.map( (value) => {
+
+        if(isNaN(value))
+            return "N/A";
+        return value % 2 == 0 ? "even" : "odd";
+    });
+
+    return newArray;
+}
+
+// Array Q7
+function fizzbuzze (array) {
+
+    let newArray = array.map( (value) => { 
+            
+        if (value % 3 === 0 && value % 5 === 0)
+            return "FizzBuzz";
+
+        else if (value % 3 === 0) 
+            return "Fizz";
+
+        else if (value % 5 === 0) 
+            return "Buzz";
+        
+        return value;
+
+    });
+
+    return newArray;
 }
 
 
